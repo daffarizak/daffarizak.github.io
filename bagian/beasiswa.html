@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design/beasiswa.css">
+    <link rel="icon" href="logo/bsi.png">
+    <title>BEASISWA</title>
+</head>
+<body>
+  <div class="card">
+    <h2>BEASISWA</h2>
+    <p>Informasi tentang beasiswa yang tersedia untuk mahasiswa baru dan berprestasi.</p>
+    
+    <ul class="scholarship-list">
+      <li><strong>Beasiswa Unggulan:</strong> Untuk mahasiswa dengan prestasi akademik tinggi.</li>
+      <li><strong>Beasiswa Sosial:</strong> Untuk mahasiswa kurang mampu.</li>
+      <li><strong>Beasiswa Olahraga:</strong> Untuk mahasiswa berprestasi di bidang olahraga.</li>
+    </ul>
+  
+    <a href="javascript:history.back()" class="button back-button">Kembali</a>
+  
+    <div class="form-section">
+      <h3>Formulir Pendaftaran Beasiswa</h3>
+      <form action="submit-form.php" method="post" enctype="multipart/form-data">
+        <label for="name">Nama Lengkap:</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="phone">Nomor Telepon:</label>
+        <input type="tel" id="phone" name="phone" required>
+  
+        <label for="scholarship-type">Jenis Beasiswa:</label>
+        <select id="scholarship-type" name="scholarship_type" required>
+            <option value="unggulan">Beasiswa Unggulan</option>
+            <option value="sosial">Beasiswa Sosial</option>
+            <option value="olahraga">Beasiswa Olahraga</option>
+        </select>
+  
+        <label for="certificates">Unggah Sertifikat:</label>
+        <input type="file" id="certificates" name="certificates[]" multiple required>
+  
+        <label for="comments">Komentar Tambahan:</label>
+        <textarea id="comments" name="comments"></textarea>
+  
+        <button type="submit" class="button submit-button">Kirim</button>
+    </form>
+    </div>
+  </div>
+  
+</body>
+</html>
